@@ -1,0 +1,3 @@
+[darglint]
+strictness = long
+ignore = DAR003, DAR103, DAR203

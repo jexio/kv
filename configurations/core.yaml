@@ -1,0 +1,21 @@
+rabbit:
+  host: ${rabbit_host}
+  port: ${rabbit_port}
+  user: ${rabbit_user}
+  password: ${rabbit_password}
+  virtualhost: ${rabbit_vhost}
+
+logging:
+    version: 1
+    formatters:
+      formatter:
+        format: "[%(asctime)s] [%(levelname)s] [%(name)s]: %(message)s"
+    handlers:
+      console:
+        class: "logging.StreamHandler"
+        level: "DEBUG"
+        formatter: "formatter"
+        stream: "ext://sys.stdout"
+    root:
+      level: "DEBUG"
+      handlers: ["console"]
